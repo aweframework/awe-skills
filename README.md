@@ -1,6 +1,6 @@
 # AWE Skills
 
-Agent Skills for [AWE Framework](https://aweframework.com) projects.
+Agent Skills for [AWE Framework](https://docs.aweframework.com) projects.
 
 ## Available Skills
 

@@ -33,11 +33,35 @@ teaches you the descriptor system, project layout, Java service patterns, and de
 
 ## AWE Project Structure
 
+### AWE project archetype
+AWE projects follow a standard multi-module Maven structure.
+
+- AWE with ReactJS frontend: `awe-boot-react-archetype`
+    ```bash
+    mvn -B archetype:generate \
+     -DarchetypeGroupId=com.almis.awe \
+     -DarchetypeArtifactId=awe-boot-react-archetype \
+     -DarchetypeVersion=[Archetype version] \
+     -DgroupId=com.mycompany.app \
+     -DartifactId=my-app \
+     -Dversion=1.0-SNAPSHOT 
+    ```
+- AWE with AngularJS frontend: `awe-boot-angular-archetype`
+    ```bash
+    mvn -B archetype:generate \
+     -DarchetypeGroupId=com.almis.awe \
+     -DarchetypeArtifactId=awe-boot-angular-archetype \
+     -DarchetypeVersion=[Archetype version] \
+     -DgroupId=com.mycompany.app \
+     -DartifactId=my-app \
+     -Dversion=1.0-SNAPSHOT 
+    ```
+
 ### Top-Level Modules
 
 ```
 awe/
-  pom.xml                    # Parent POM (v4.11.12-SNAPSHOT)
+  pom.xml                    # Parent POM
   awe-framework/             # Core framework (10 sub-modules)
     awe-dependencies/        # BOM — centralizes dependency versions
     awe-model/               # Domain model, DTOs (ServiceData, DataList)
@@ -162,7 +186,7 @@ interactions. Each screen file lives in the `screen/` folder.
     <window label="SCREEN_TEXT_FILTERS" icon="filter" style="static criteria">
       <tag id="FilterArea" type="div" style="panel-body static">
         <criteria label="PARAMETER_TASK" component="suggest" id="CrtTsk"
-                  server-action="data" target-action="SchTskSug"
+                  server-action="data" target-action="launchSchedulerTaskSuggest"
                   style="col-xs-12 col-sm-6 col-lg-4" />
         <criteria label="PARAMETER_ACTIVE" component="select" id="CrtAct"
                   initial-load="enum" target-action="Es1Es0"
@@ -278,7 +302,7 @@ All queries live in `global/Queries.xml`.
   <field id="IdeAweAppPar" alias="identifier" />
   <field id="ParNam" alias="name" />
   <field id="ParVal" alias="value" />
-  <field id="Cat" alias="category" translate="CatParTyp" />
+  <field id="Cat" alias="category" translate="CatParameterType" />
   <field id="Des" alias="description" />
   <where>
     <and>
@@ -729,6 +753,7 @@ AWE validates XML descriptors against XSD schemas. Schema locations are declared
         xsi:noNamespaceSchemaLocation=
           "https://aweframework.gitlab.io/awe/docs/schemas/screen.xsd"
         template="window" label="...">
+</screen>
 ```
 
 Available schemas:
