@@ -1,10 +1,10 @@
 # AWE Skills
 
-> Agent Skills for [AWE Framework](https://aweframework.com) — Java/Spring Boot web application framework
+> Agent Skills for [AWE Framework](https://docs.aweframework.com) — Java/Spring Boot web application framework
 
 [![skills.sh](https://img.shields.io/badge/skills.sh-awe--framework-blue?style=flat-square)](https://skills.sh/aweframework/awe-skills/awe-framework)
 [![GitHub Repo stars](https://img.shields.io/github/stars/aweframework/awe-skills?style=flat-square)](https://github.com/aweframework/awe-skills)
-[![License](https://img.shields.io/badge/License-Apache--2.0?style=flat-square)](LICENSE)
+[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## What is this?
 
